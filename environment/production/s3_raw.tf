@@ -29,3 +29,9 @@ module "ml-ops-s3-raw-data" {
     }
   ]
 }
+
+resource "aws_s3_bucket_object" "ml-ops-s3-object-data-wrangler" {
+  bucket = module.ml-ops-s3-raw-data.this_s3_bucket_id
+  key = "/data-wrangler/awswrangler-2.7.0-py3-none-any.whl"
+  source = "${path.module}/sources/awswrangler-2.7.0-py3-none-any.whl"
+}
