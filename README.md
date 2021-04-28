@@ -1,2 +1,2 @@
-# terraform-aws-ml-step-function
+# terraform-aws-ml-ops-step-function
 A step function to ease machine learning operations
